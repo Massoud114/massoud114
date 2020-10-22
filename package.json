@@ -1,0 +1,26 @@
+{
+  "name": "Monportfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Massoud114/Massoud114.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Massoud114/Massoud114.github.io/issues"
+  },
+  "homepage": "https://github.com/Massoud114/Massoud114.github.io#readme",
+  "dependencies": {
+    "aos": "^2.3.4",
+    "parcel-bundler": "^1.12.4",
+    "particlesjs": "^2.2.3",
+    "rellax": "^1.12.1"
+  }
+}

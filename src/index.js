@@ -1,6 +1,9 @@
 import $ from "jquery"
 import './style.css'
+import 'aos/dist/aos.css';
 import Typed from 'typed.js';
+import AOS from 'aos';
+//import { tns } from "../node_modules/tiny-slider/src/tiny-slider"
 
 $(document).ready(function () {
     $(window).scroll(function () {
@@ -29,18 +32,39 @@ $(document).ready(function () {
     })
 
     //typing animation script
-    const options = {
-        strings: ["Développeur Web", "Développeur Mobile ", "Full-Stack", "Freelancer", "Gamer", "SPIDER"],
+    new Typed('.typing', {
+        strings: ["Développeur Mobile", "Développeur Web PHP", "Développeur Full-Stack", "Freelancer", "Gamer", "SPIDER"],
         typeSpeed: 100,
         backSpeed: 60,
         loop: true,
         startDelay: 2000,
-        backDelay: 2000,
+        backDelay: 1000,
         cursorChar: '_',
-    };
+    });
+    new Typed('.typing2', {
+        strings: ["Développeur Web PHP", "Full-Stack"],
+        typeSpeed: 100,
+        backSpeed: 60,
+        loop: false,
+        startDelay: 1000,
+        backDelay: 1000,
+        cursorChar: '|',
+    });
 
-    const typed = new Typed('.typing', options);
-
-    $("#teams").hide()
-
+    /* $("#teams").hide()
+    var slider = tns({
+        container: '.projects-content',
+        items: 2,
+        slideBy: 'page',
+        autoplay: true,
+        gutter: 50
+    });
+    console.log(slider)*/
+    AOS.init({
+        delay: 50, // values from 0 to 3000, with step 50ms
+        duration: 1000, // values from 0 to 3000, with step 50ms
+        easing: 'ease', // default easing for AOS animations
+        once: false, // whether animation should happen only once - while scrolling down
+        mirror: true,
+    });
 })

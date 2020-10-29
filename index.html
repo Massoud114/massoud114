@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Personal Portfolio</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css">
 	<script src="src/index.js"></script>
 	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
@@ -25,22 +26,22 @@
 </nav>
 
 <!-- Home section start -->
-<section class="home" id="particles-js">
+<section class="home" data-aos="fade-up" data-aos-delay="100">
 	<div class="max-width">
 		<div class="home-content">
-			<div class="text-1">Bonjour, Je suis</div>
+			<div class="text-1">Bonjour, je suis</div>
 			<div class="text-2">Massoud Fataou</div>
-			<div class="text-3">Et je suis <span class="typing"> </span></div>
+			<div class="text-3">Et je suis <span class="typing"></span></div>
 			<a href="#">Me contacter</a>
 		</div>
 	</div>
 	<div class="picture">
-		<img src="./img/home-picture.png" alt="">
+		<img src="./img/home-picture.min.png" alt="">
 	</div>
 </section>
 
 <!--About section start-->
-<section class="about" id="about">
+<section class="about" id="about" data-aos="fade-in">
 	<div class="max-width">
 		<h2 class="title">A propos de moi</h2>
 		<div class="about-content">
@@ -48,9 +49,9 @@
 				<img src="./img/profile-1.jpeg" alt="">
 			</div>
 			<div class="column right">
-				<div class="text">Je suis Massoud et je suis <span>Programeur</span></div>
-				<p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda doloribus labore mollitia odio odit pariatur, quaerat sint? Adipisci commodi distinctio iste labore magnam necessitatibus nobis obcaecati reprehenderit ullam! Dicta, nobis.</span><span>Consectetur corporis debitis dolores ducimus esse, harum in labore laboriosam, maiores modi neque nobis nostrum perferendis rem repudiandae tempora tenetur. Aliquid beatae cupiditate doloremque eaque exercitationem itaque rem sint temp ore?</span></p>
-				<a href="#">Voir mon CV</a>
+				<div class="text">Je suis Massoud et je suis <span class="typing2"></span></div>
+				<p><span>Jeune dévéloppeur, 19 ans. Curieux, passioné, attentif et créatif, je m'applique en informatique depuis 6 ans. A ce jour, j'ai une expérience de 3 ans dans le dévéloppement web/mobile et dans la programmation en général. Avec l'évolution des technologies du Web, quoi de mieux que de se former en auto-didacte sur Internet. J'aime beaucoup travailler en freelance, en collaboration avec d'autres développeurs. J'admets avoir la phobie des bureaux administratifs mais bon, du moment que j'exerce ma passion, ça va :)</span></p>
+				<a href="./doc/cv.pdf">Voir mon CV</a>
 			</div>
 		</div>
 	</div>
@@ -61,7 +62,8 @@
 	<div class="max-width">
 		<h2 class="title">Mes Services</h2>
 		<div class="serv-content">
-			<div class="card">
+			<div class="card" data-aos="fade-left" data-aos-offset="300"
+				 data-aos-easing="ease-in-sine">
 				<div class="box">
 					<i class="fab fa-symfony"></i>
 					<div class="text">Symfony</div>
@@ -69,7 +71,7 @@
 				</div>
 			</div>
 
-			<div class="card">
+			<div class="card" data-aos="fade-down">
 				<div class="box">
 					<i class="fab fa-js"></i>
 					<div class="text">JavaScript</div>
@@ -77,7 +79,8 @@
 				</div>
 			</div>
 
-			<div class="card">
+			<div class="card" data-aos="fade-right" data-aos-offset="300"
+				 data-aos-easing="ease-in-sine">
 				<div class="box">
 					<i class="fab fa-react"></i>
 					<div class="text">React</div>
@@ -87,58 +90,40 @@
 		</div>
 	</div>
 </section>
-<!-- skills section start -->
-<section class="skills" id="skills">
+<!-- projects section start -->
+<section class="projects" id="projects">
 	<div class="max-width">
-		<h2 class="title">My Skills</h2>
-		<div class="skills-content">
-			<div class="column left">
-				<div class="text">My creative skills & experiences</div>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, autem blanditiis commodi consequuntur culpa delectus, deserunt distinctio dolor eos illum, incidunt iure laudantium modi nihil quaerat recusandae sed sint soluta totam velit. Asperiores dicta ducimus enim eum illo necessitatibus officiis, placeat quas qui quia quisquam, totam vel veniam. Ab ad, aliquam aliquid consectetur consequatur ea nihil non quidem tenetur voluptate.</p>
-				<a href="#">Voir Plus</a>
+		<h2 class="title">Mes projets</h2>
+		<div class="projects-content">
+			<div class="card">
+				<div class="project-picture">
+					<img src="./img/profile-1.jpeg" alt="">
+				</div>
+				<div class="tags">Symfony, Laravel</div>
+				<div class="project-title">AKOWE</div>
+				<p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At cumque eveniet harum iure modi mollitia perspiciatis quibusdam sed sint unde? Deserunt earum quis repellat.</p>
 			</div>
-			<div class="column right">
-				<div class="bars">
-					<div class="info">
-						<span>HTML</span>
-						<span>80%</span>
-					</div>
-					<div class="line html"></div>
+			<div class="card">
+				<div class="project-picture">
+					<img src="./img/profile-1.jpeg" alt="">
 				</div>
-				<div class="bars">
-					<div class="info">
-						<span>CSS</span>
-						<span>60%</span>
-					</div>
-					<div class="line css"></div>
+				<div class="tags">Symfony, Laravel</div>
+				<div class="project-title">AKOWE</div>
+				<p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At cumque eveniet harum iure modi mollitia perspiciatis quibusdam sed sint unde? Deserunt earum quis repellat.</p>
+			</div>
+			<div class="card">
+				<div class="project-picture">
+					<img src="./img/profile-1.jpeg" alt="">
 				</div>
-				<div class="bars">
-					<div class="info">
-						<span>JavaScript</span>
-						<span>50%</span>
-					</div>
-					<div class="line js"></div>
-				</div>
-				<div class="bars">
-					<div class="info">
-						<span>PHP</span>
-						<span>90%</span>
-					</div>
-					<div class="line php"></div>
-				</div>
-				<div class="bars">
-					<div class="info">
-						<span>MySQL</span>
-						<span>50%</span>
-					</div>
-					<div class="line mysql"></div>
-				</div>
+				<div class="tags">Symfony, Laravel</div>
+				<div class="project-title">AKOWE</div>
+				<p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At cumque eveniet harum iure modi mollitia perspiciatis quibusdam sed sint unde? Deserunt earum quis repellat.</p>
 			</div>
 		</div>
 	</div>
 </section>
 
-<!-- teams section start -->
+<!-- teams section start
 <section class="teams" id="teams">
 	<div class="max-width">
 		<h2 class="title">My Teams</h2>
@@ -181,6 +166,8 @@
 		</div>
 	</div>
 </section>
+-->
+
 
 <!--contact section start -->
 <section class="contact" id="contact">
@@ -188,35 +175,33 @@
 		<h2 class="title">Contactez-moi</h2>
 		<div class="contact-content">
 			<div class="column left">
-				<div class="text">Me joindre</div>
-				<p>Vous pouvez me joindre via ces différentes informations. Merci de mentionner l'objet dans votre message</p>
 				<div class="icons">
-					<div class="row">
-						<i class="fas fa-user"></i>
+					<a href="https://github.com/Massoud114" class="row">
+						<i class="fab fa-github"></i>
 						<div class="info">
-							<div class="head">Nom</div>
-							<div class="sub-title">Massoud Fataou</div>
+							<div class="head">Github</div>
+							<div class="sub-title">github.com/Massoud114</div>
 						</div>
-					</div>
-					<div class="row">
-						<i class="fas fa-map-marker-alt"></i>
+					</a>
+					<a href="https://twitter.com/_Spider114"  class="row">
+						<i class="fab fa-twitter"></i>
 						<div class="info">
-							<div class="head">Address</div>
-							<div class="sub-title">Cotonou, Akpakpa Kpondehou</div>
+							<div class="head">Twitter</div>
+							<div class="sub-title">twitter.com/_Spider114</div>
 						</div>
-					</div>
-					<div class="row">
+					</a>
+					<a href="mailto:massoudfataou@gmail.com"  class="row" style="margin-bottom: 0">
 						<i class="fas fa-envelope"></i>
 						<div class="info">
 							<div class="head">E-mail</div>
 							<div class="sub-title">massoudfataou@gmail.com</div>
 						</div>
-					</div>
+					</a>
 				</div>
 			</div>
 			<div class="column right">
 				<div class="text">M'envoyez un courriel</div>
-				<form action="">
+				<form action="#" data-netlify="true">
 					<div class="field">
 						<div class="field email"><input type="text" placeholder="Votre Email"></div>
 					</div>
@@ -237,7 +222,7 @@
 
 <!-- footer section start -->
 <footer>
-	<span>Créé par : <a href="#">Spider</a> | <span class="far fa-copyright"></span> 2020 All rights reserved</span>
+	<span>Créé par : <a href="#">Spider</a> | <span class="far fa-copyright"></span> 2020 Tous droits réservées</span>
 </footer>
 </body>
 </html>

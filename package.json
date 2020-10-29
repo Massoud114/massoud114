@@ -19,13 +19,8 @@
   "homepage": "https://github.com/Massoud114/Massoud114.github.io#readme",
   "dependencies": {
     "aos": "^2.3.4",
-    "jquery": "^3.5.1",
-    "owl.carousel": "^2.3.4",
     "parcel-bundler": "^1.12.4",
-    "particles.js": "^2.0.0",
     "particlesjs": "^2.2.3",
-    "rellax": "^1.12.1",
-    "typed.js": "^2.0.11",
-    "waypoints": "^4.0.1"
+    "rellax": "^1.12.1"
   }
 }

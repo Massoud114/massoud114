@@ -3,7 +3,7 @@ import './style.css'
 import 'aos/dist/aos.css';
 import Typed from 'typed.js';
 import AOS from 'aos';
-//import { tns } from "../node_modules/tiny-slider/src/tiny-slider"
+import { tns } from "../node_modules/tiny-slider/src/tiny-slider"
 
 $(document).ready(function () {
     $(window).scroll(function () {
@@ -51,20 +51,24 @@ $(document).ready(function () {
         cursorChar: '|',
     });
 
-    /* $("#teams").hide()
-    var slider = tns({
-        container: '.projects-content',
-        items: 2,
-        slideBy: 'page',
-        autoplay: true,
-        gutter: 50
+    let slider = tns({
+        container: '.carousel',
+        items: 2.5,
+        slideBy: 1,
+        gutter : 30,
+        loop : false,
+        arrowKeys : true,
+        navPosition: 'bottom',
+        controls : false,
+        mouseDrag : true
     });
-    console.log(slider)*/
+    console.log(slider)
+
     AOS.init({
         delay: 50, // values from 0 to 3000, with step 50ms
         duration: 1000, // values from 0 to 3000, with step 50ms
         easing: 'ease', // default easing for AOS animations
-        once: false, // whether animation should happen only once - while scrolling down
+        once: true, // whether animation should happen only once - while scrolling down
         mirror: true,
     });
 })

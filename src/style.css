@@ -173,7 +173,7 @@ html {
 section {
 	padding: 100px 0;
 }
-.about, .services, .projects, .teams, .contact, footer {
+.about, .services, .projects, .projects, .contact, footer {
 	font-family: 'Ubuntu', 'sans-serif';
 }
 .about .about-content,
@@ -268,7 +268,7 @@ section .title::after {
 	color: #FFF;
 }
 .services .title::before,
-.teams .title::before{
+.projects .title::before{
 	background: #FFFFFF;
 }
 .services .title::after{
@@ -313,110 +313,66 @@ section .title::after {
 	line-height: 1.5;
 }
 
-/* projects section styling */
+/* team section styling */
 .projects {
 	background: #202746;
 }
-.projects .max-width {
-	padding: 0 30px;
-}
 .projects .title::after {
-	content: "mes réalisations";
+	content: "réalisations";
 	background: #202746;
 }
-.projects .projects-content {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-
+.projects .carousel .card {
 }
-.projects-content .card {
-	width : calc(38% - 20px);
+.projects .carousel  .box {
+	border-radius: 6px 6px 0 0;
 	background: #0E0F34;
 	border-bottom: 2px solid darkorange;
 }
-.projects-content .card .project-picture {
+.projects .carousel .project-picture {
+	border-radius: 6px 6px 0 0;
 	width: 100%;
-	height: auto;
 	overflow: hidden;
-	border-radius: 6px;
+	height: 300px;
 }
-.projects-content .card img {
-	height: 350px;
+.projects .carousel .card img {
+	height: 300px;
 	width: 100%;
 	object-fit: cover;
 	display: block;
 	transition: all 0.5s ease 0s;
 	opacity: 1;
 }
-.projects-content .tags {
+.projects .carousel .tags {
 	font-size: 12px;
 	color: darkorange;
 	margin-left: 50px;
 	text-transform: uppercase;
 	margin-top: 30px;
 }
-.projects-content .card .project-title {
+.projects .card .project-title {
 	margin: 25px 50px;
 	font-size: 28px;
 	font-family: 'Playfair Display', 'sans-serif';
 	text-transform: uppercase;
 }
-.projects-content .card .text {
+.projects .card .text {
 	text-align: justify;
 	margin: 25px 35px 55px 35px;
 }
-.projects-content .card img:hover {
+.projects .card .text {
+	text-align: justify;
+	margin: 25px 35px 55px 35px;
+}
+.projects .box img:hover {
 	opacity: 0.4;
 	transform: scale(1.105);
+	cursor: pointer;
 }
 
-/* team section styling
-.teams .title::after {
-	content: "who with me";
+.tns-nav{
+	margin: 20px 25px;
 }
-.teams .carousel .card {
-	background: #222;
-	border-radius: 6px;
-	padding: 25px 35px;
-	text-align: center;
-	transition: all 0.3s ease;
-}
-.teams .carousel .card:hover {
-	background: darkorange;
-}
-.teams .carousel .card .box {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	transition: all 0.3s ease;
-}
-.teams .carousel .card:hover .box{
-	transform: scale(1.05);
-}
-.teams .carousel .card .text{
-	font-size: 25px;
-	font-weight: 500;
-	margin: 10px 0 7px 0;
- }
-
-.teams .carousel .card img {
-	height: 150px;
-	width: 150px;
-	object-fit: cover;
-	border-radius: 50%;
-	border: 5px solid darkorange;
-	transition: all 0.3s ease;
-}
-.teams .carousel .card:hover img {
-	border-color: #FFFFFF;
-}
-.owl-dots {
-	text-align: center;
-	margin-top: 20px;
-}
-.owl-dot {
+.tns-nav button{
 	height: 13px;
 	width: 13px;
 	margin: 0 5px;
@@ -425,15 +381,12 @@ section .title::after {
 	border: 2px solid darkorange!important;
 	transition: all 0.3s ease;
 }
-.owl-dot.active {
+.tns-nav-active {
 	width: 35px;
 	border-radius: 14px;
+	background : darkorange;
 }
-.owl-dot.active,
-.owl-dot:hover {
-		background : darkorange;
-}
-*/
+
 
 /* section contact styling */
 .contact .title::after{

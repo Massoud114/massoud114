@@ -24,13 +24,6 @@ $(document).ready(function () {
     $('.scroll-up-btn').click(function () {
         $('html').animate({scrollTop: 0})
     })
-
-    //toggle navbar/menu
-    $('.menu-btn').click(function () {
-        $('.navbar .menu').toggleClass("active")
-        $('.menu-btn i').toggleClass("active")
-    })
-
     //typing animation script
     new Typed('.typing', {
         strings: ["Développeur Mobile", "Développeur Web PHP", "Développeur Full-Stack", "Freelancer", "Gamer", "SPIDER"],
@@ -53,14 +46,25 @@ $(document).ready(function () {
 
     let slider = tns({
         container: '.carousel',
-        items: 2.5,
+        items: 1,
         slideBy: 1,
         gutter : 30,
         loop : false,
         arrowKeys : true,
         navPosition: 'bottom',
         controls : false,
-        mouseDrag : true
+        mouseDrag : true,
+        responsive: {
+            1100:{
+                items: 2.5
+            },
+            800: {
+                items: 2
+            },
+            640: {
+                items: 1
+            }
+        }
     });
     console.log(slider)
 
@@ -71,4 +75,5 @@ $(document).ready(function () {
         once: true, // whether animation should happen only once - while scrolling down
         mirror: true,
     });
+
 })

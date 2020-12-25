@@ -175,16 +175,17 @@
 				</div>
 				<div class="column right" data-aos="fade-in" data-aos-delay="100">
 					<div class="text">M'envoyez un courriel</div>
-					<form action="#" data-netlify="true">
+					<form action="#" name="contact" data-netlify="true" data-netlify-recaptcha="true">
 						<div class="field">
-							<div class="field email"><input type="text" placeholder="Votre Email"></div>
+							<div class="field email"><input type="text" name="E-mail" placeholder="Votre Email"></div>
 						</div>
 						<div class="field">
-							<div class="field name"><input type="text" placeholder="Sujet"></div>
+							<div class="field name"><input name="Subject" type="text" placeholder="Sujet"></div>
 						</div>
 						<div class="field textarea">
-							<textarea name="" id="" cols="30" rows="10" placeholder="Description projet..." required ></textarea>
+							<textarea name="description" id="" cols="30" rows="10" placeholder="Description projet..." required	></textarea>
 						</div>
+						<div data-netlify-recaptcha="true"></div>
 						<div class="button">
 							<button type="submit">Envoyer</button>
 						</div>

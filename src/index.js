@@ -26,7 +26,7 @@ $(document).ready(function () {
     })
     //typing animation script
     new Typed('.typing', {
-        strings: ["Développeur Mobile", "Développeur Web PHP", "Développeur Full-Stack", "Freelancer", "Gamer", "SPIDER"],
+        strings: ["Développeur Mobile", "Développeur Web PHP", "Développeur Full-Stack", "Freelance", "Gamer", "SPIDER"],
         typeSpeed: 100,
         backSpeed: 60,
         loop: true,

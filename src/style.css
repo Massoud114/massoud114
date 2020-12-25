@@ -359,12 +359,21 @@ section .title::after {
 .projects .box img:hover {
 	opacity: 0.4;
 	transform: scale(1.105);
-	cursor: pointer;
+}
+
+.carousel {
+	cursor: grabbing;
 }
 
 .tns-nav{
 	margin: 20px 25px;
 }
+.tns-nav-active {
+	width: 35px;
+	border-radius: 14px;
+	background : darkorange;
+}
+
 .tns-nav button{
 	height: 13px;
 	width: 13px;
@@ -374,12 +383,6 @@ section .title::after {
 	border: 2px solid darkorange!important;
 	transition: all 0.3s ease;
 }
-.tns-nav-active {
-	width: 35px;
-	border-radius: 14px;
-	background : darkorange;
-}
-
 
 /* section contact styling */
 .contact .title::after{

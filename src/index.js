@@ -60,10 +60,8 @@ $(document).ready(function () {
             },
             800: {
                 items: 2,
-                mouseDrag : false,
             },
             640: {
-                mouseDrag : false,
                 items: 1,
             }
         }

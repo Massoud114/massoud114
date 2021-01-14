@@ -362,7 +362,7 @@ section .title::after {
 }
 
 .carousel {
-	cursor: grabbing;
+	cursor: grab;
 }
 
 .tns-nav{
@@ -636,4 +636,17 @@ footer span a:hover {
 	.home .home-content .text-3{
 		font-size: 27px;
 	}
+}
+
+
+::-webkit-scrollbar {
+	width: 8px;
+}
+::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 5px grey;
+	border-radius: 5px;
+}
+::-webkit-scrollbar-thumb {
+	background: darkorange;
+	border-radius: 5px;
 }

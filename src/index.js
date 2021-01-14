@@ -59,14 +59,15 @@ $(document).ready(function () {
                 items: 2.5
             },
             800: {
-                items: 2
+                items: 2,
+                mouseDrag : false,
             },
             640: {
-                items: 1
+                mouseDrag : false,
+                items: 1,
             }
         }
     });
-    console.log(slider)
 
     AOS.init({
         delay: 50, // values from 0 to 3000, with step 50ms

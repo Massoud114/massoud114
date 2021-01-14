@@ -306,7 +306,7 @@ section .title::after {
 	line-height: 1.5;
 }
 
-/* team section styling */
+/* projects section styling */
 .projects {
 	background: #202746;
 }
@@ -316,7 +316,7 @@ section .title::after {
 }
 .projects .carousel .card {
 }
-.projects .carousel  .box {
+.projects .carousel .box {
 	border-radius: 6px 6px 0 0;
 	background: #0E0F34;
 	border-bottom: 2px solid darkorange;
@@ -368,20 +368,19 @@ section .title::after {
 .tns-nav{
 	margin: 20px 25px;
 }
-.tns-nav-active {
-	width: 35px;
-	border-radius: 14px;
-	background : darkorange;
+.tns-nav .tns-nav-active {
+	background-color: darkorange;
 }
 
 .tns-nav button{
-	height: 13px;
-	width: 13px;
+	width: 20px;
+	height: 4px;
 	margin: 0 5px;
 	outline: none!important;
-	border-radius: 50%;
-	border: 2px solid darkorange!important;
 	transition: all 0.3s ease;
+	border: 0 solid;
+	background: #ff8c0052;
+	cursor: pointer;
 }
 
 /* section contact styling */
@@ -437,14 +436,19 @@ section .title::after {
 }
 .contact .right form .fields {
 	display: flex;
+	justify-content: space-between;
+
 }
 .contact .right form .field{
-	height: 45px;
+	height: 65px;
 	width: 100%;
-	margin-bottom: 25px;
+	margin-bottom: 15px;
+}
+.contact .right form .smallfield{
+	width: 48%;
 }
 .contact .right form .textarea {
-	height: 80px;
+	height: 130px;
 	width: 100%;
 }
 .contact .right form .field input,
@@ -454,7 +458,7 @@ section .title::after {
 	border : 1px solid lightgrey;
 	border-radius: 6px;
 	outline: none;
-	padding: 0 15px;
+	padding: 0 25px;
 	font-size: 17px;
 	font-family: 'Poppins', 'sans-serif';
 }
@@ -463,8 +467,10 @@ section .title::after {
 	resize: none;
 }
 .contact .right form .button {
-	height: 47px;
+	height: 60px;
 	width: 170px;
+	margin:auto;
+	margin-top: -40px !important;
 }
 .contact .right form .button button {
 	width: 100%;
@@ -481,6 +487,7 @@ section .title::after {
 .contact .right form .button button:hover {
 	color: darkorange;
 	background: none;
+	border : 2px solid;
 }
 
 /* footer section styling */
@@ -559,7 +566,7 @@ footer span a:hover {
 		font-size: 70px;
 	}
 	.home .home-content .text-3{
-		font-size: 35px;
+		font-size: 20px;
 	}
 	.home .home-content a {
 		font-size: 23px;

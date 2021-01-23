@@ -1,0 +1,53 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add owl.carousel
+
+PATH: 
+  C:\Users\Spider\Documents\GitHub\Monportfolio\node_modules\.bin;C:\Users\Spider\Documents\GitHub\Monportfolio\node_modules\.bin;C:\Python38\Scripts\;C:\Python38\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\Symfony;C:\php-7.4.9;C:\composer;C:\Program Files (x86)\Yarn\bin\;C:\wamp64\www\MyFirstApp\bin\wkhtmltopdf\bin;C:\wamp64\bin\php\php7.4.0;C:\Program Files\OpenSSL-Win64\bin;C:\MinGW\bin;C:\Users\Spider\AppData\Local\Microsoft\WindowsApps;C:\Users\Spider\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Spider\AppData\Roaming\npm;C:\php-7.4.9;C:\Users\Spider\AppData\Roaming\Composer\vendor\bin;C:\Program Files\JetBrains\PyCharm Edu 2019.3.1\bin;;C:\Users\Spider\AppData\Local\Yarn\bin;C:\wkhtmltopdf\bin;C:\wamp64\bin\php\php7.4.0;C:\Program Files\OpenSSL-Win64\bin;C:\MinGW\bin;C:\Users\Spider\AppData\Local\GitHubDesktop\bin
+
+Yarn version: 
+  1.22.4
+
+Node version: 
+  14.6.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: EPERM: operation not permitted, unlink 'C:\Users\Spider\Documents\GitHub\Monportfolio\node_modules\deasync\bin\win32-x64-node-14\deasync.node'
+
+npm manifest: 
+  {
+    "name": "Monportfolio",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/Massoud114/Massoud114.github.io.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/Massoud114/Massoud114.github.io/issues"
+    },
+    "homepage": "https://github.com/Massoud114/Massoud114.github.io#readme",
+    "dependencies": {
+      "aos": "^2.3.4",
+      "jquery": "^3.5.1",
+      "parcel-bundler": "^1.12.4",
+      "rellax": "^1.12.1",
+      "typed.js": "^2.0.11",
+      "waypoints": "^4.0.1"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

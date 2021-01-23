@@ -471,6 +471,7 @@ section .title::after {
 	width: 170px;
 	margin:auto;
 	margin-top: -40px !important;
+	margin-bottom: 15px;
 }
 .contact .right form .button button {
 	width: 100%;

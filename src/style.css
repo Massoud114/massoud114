@@ -14,6 +14,10 @@ html {
 	font-family: 'Ubuntu', "sans-serif";
 }
 
+::selection {
+	background: darkorange;
+}
+
 .max-width{
 	max-width: 1300px;
 	margin: auto;
@@ -236,6 +240,10 @@ section .title::after {
 .about .about-content .right .text span {
 	color: darkorange;
 }
+.about .about-content .right p::first-letter {
+	color: darkorange;
+	font-size: 45px;
+}
 .about .about-content .right p {
 	text-align: justify;
 	line-height: 2;
@@ -320,12 +328,18 @@ section .title::after {
 	border-radius: 6px 6px 0 0;
 	background: #0E0F34;
 	border-bottom: 2px solid darkorange;
+	overflow: hidden;
 }
 .projects .carousel .project-picture {
 	border-radius: 6px 6px 0 0;
 	width: 100%;
 	overflow: hidden;
 	height: 300px;
+	transition: transform ease 1s;
+}
+.projects .box:hover > .project-picture {
+	opacity: 0.4;
+	transform: scale(1.105);
 }
 .projects .carousel .card img {
 	height: 300px;
@@ -355,10 +369,6 @@ section .title::after {
 .projects .card .text {
 	text-align: justify;
 	margin: 25px 35px 55px 35px;
-}
-.projects .box img:hover {
-	opacity: 0.4;
-	transform: scale(1.105);
 }
 
 .carousel {
@@ -403,6 +413,9 @@ section .title::after {
 	display: flex;
 	flex-direction: column;
 }
+.contact .contact-content .row:hover {
+	border-color: darkorange;
+}
 .contact .contact-content .row {
 	display: flex;
 	height: 90px;
@@ -411,10 +424,7 @@ section .title::after {
 	border-radius: 15px;
 	padding: 0 45px;
 	margin: 15px 0;
-	transition: all 0.5s ease;
-}
-.contact .contact-content .row:hover {
-	border-color: darkorange;
+	transition: all .5s ease 0ms;
 }
 .contact .contact-content .row .info {
 	margin-left: 30px;

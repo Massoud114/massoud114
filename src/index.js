@@ -4,6 +4,7 @@ import 'aos/dist/aos.css';
 import Typed from 'typed.js';
 import AOS from 'aos';
 import { tns } from "../node_modules/tiny-slider/src/tiny-slider"
+import Weglot from './weglot.min'
 
 $(document).ready(function () {
     $(window).scroll(function () {

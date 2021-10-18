@@ -9,9 +9,9 @@
 
 - 💬 Ask me about **Symfony, React**
 
-- 📫 How to reach me **massoudfataou@gmail.com**
+- 📫 How to reach me : **massoudfataou@gmail.com**
 
-- ⚡ Fun fact **If Senna (LoL) were human she would be mine💍**
+- ⚡ Fun fact : **If Senna (LoL) were human she would be mine💍**
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">

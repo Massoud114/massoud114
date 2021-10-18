@@ -661,3 +661,35 @@ footer span a:hover {
 	background: darkorange;
 	border-radius: 5px;
 }
+
+/*WeGlot Selector*/
+
+.wg-default {
+	top: 50px !important;
+	bottom: initial !important;
+}
+
+.country-selector {
+	font-weight: bold !important;
+}
+
+.wg-drop.country-selector .wgcurrent a {
+	padding-right: 40px;
+}
+.wg-default .wg-drop.country-selector a {
+	font-size: 13px;
+}
+
+.country-selector a {
+	color: #FFFFFF !important;
+}
+
+.wg-drop.country-selector, .wg-drop.country-selector ul, .wgcurrent {
+	background: #ff8c00 !important;
+	border: none !important;
+	margin: 0;
+}
+
+.wg-drop.country-selector .wgcurrent:after {
+	color: #0E0F34 !important;
+}

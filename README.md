@@ -5,7 +5,7 @@
 
 - 🌱 I’m currently learning **React Native, Rust**
 
-- 👨‍💻 All of my projects are available at [https://massoudfataou.me](https://massoudfataou.me)
+- 👨‍💻 All of my projects are available at [https://massoud.bj](https://massoud.bj)
 
 - 💬 Ask me about **Symfony, React**
 

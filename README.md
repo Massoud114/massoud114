@@ -3,7 +3,7 @@
 
 <p align="left"> <a href="https://twitter.com/_Spider114" target="blank"><img src="https://img.shields.io/twitter/follow/spider_114?logo=twitter&style=for-the-badge" alt="Spider_114" /></a> </p>
 
-- 🌱 I’m currently learning **React Native, Rust**
+- 🌱 I’m currently learning **Rust**
 
 - 👨‍💻 All of my projects are available at [https://massoud.bj](https://massoud.bj)
 

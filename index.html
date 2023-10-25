@@ -13,8 +13,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css">
 	<link rel="alternate" hreflang="fr" href="https://massoudfataou.me">
 	<link rel="alternate" hreflang="en" href="https://en.massoudfataou.me">
-	<script src="src/index.js" defer></script>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+	<script src="src/index.js" defer type="module"></script>
 	<script type="text/javascript" src="https://cdn.weglot.com/weglot.min.js"></script>
 	<script defer>
 		Weglot.initialize({
@@ -30,7 +29,10 @@
 	</div>
 	<nav class="navbar">
 		<div class="max-width">
-			<div class="logo"><a href="#"><img src="./img/logoSpiderWhite.png" alt="image logo spider"><span>SPIDER</span></a></div>
+			<div class="logo">
+				<a href="#">
+					<img src="./img/logoSpiderWhite.png" alt="image logo spider"><span>SPIDER</span></a>
+			</div>
 			<ul class="menu">
 			</ul>
 		</div>
@@ -47,7 +49,7 @@
 			</div>
 		</div>
 		<div class="picture">
-			<img src="./img/home-picture.min.png" alt="image homme debout">
+			<img src="./img/home-picture.min.webp" alt="image homme debout">
 		</div>
 	</section>
 
@@ -57,13 +59,13 @@
 			<h2 class="title">A propos de moi</h2>
 			<div class="about-content">
 				<div class="column left">
-					<img src="./img/home-picture-2.jpg" alt="photo identité personne">
+					<img src="./img/home-picture-2.webp" alt="photo identité personne">
 				</div>
 				<div class="column right">
 					<div class="text">Je suis Massoud et je suis <span class="typing2"></span></div>
-					<p><span>Jeune développeur, 20 ans. Curieux, passionné, attentif et créatif, je m'applique en
-						informatique depuis 6 ans. À ce jour, j'ai une expérience de 5 ans dans le développement
-						web/mobile et dans la programmation en général. Avec l'évolution des technologies du Web, quoi de mieux que de se former en autodidacte sur Internet. J'aime beaucoup travailler en freelance, en collaboration avec d'autres développeurs. J'admets avoir la phobie des bureaux administratifs, mais bon, du moment que j'exerce ma passion, ça va &#128513;</span></p>
+					<p><span>Jeune développeur, <span id="year"></span> ans. Curieux, passionné, attentif et créatif, je m'applique en
+						informatique depuis <span class="xpAge"></span> ans. À ce jour, j'ai <span class="xpAge"></span> ans d'expérience dans le développement
+						web/mobile et dans la programmation en général. Avec l'évolution des technologies du Web, quoi de mieux que de se former en autodidacte sur Internet. J'aime beaucoup travailler en freelance, en collaboration avec d'autres développeurs. J'admets avoir la phobie des bureaux administratifs, mais bon, du moment que j'exerce ma passion, ça va &#128513;.</span></p>
 					<a href="./doc/cv.pdf">Voir mon CV</a>
 				</div>
 			</div>
@@ -78,7 +80,7 @@
 				<div class="card" data-aos="fade-left" data-aos-offset="150"
 					 data-aos-easing="ease-in-sine">
 					<div class="box">
-						<i class="fab fa-symfony"></i>
+						<i class="fa-brands fa fa-symfony"></i>
 						<div class="text">Symfony / Laravel</div>
 						<p>J'ai débuté dans la programmation avec PHP et je développe des applications avec depuis 3
 							ans et je maitrise les Frameworks Symfony et Laravel !</p>
@@ -97,7 +99,7 @@
 					 data-aos-easing="ease-in-sine">
 					<div class="box">
 						<i class="fab fa-react"></i>
-						<div class="text">React</div>
+						<div class="text">Kotlin</div>
 						<p>Vous êtes dans le besoin d'un développeur pour le développement d'applications web
 							réactives avec une très bonne expérience utilisateur ? Je maitrise le Framework React !</p>
 					</div>
@@ -215,7 +217,10 @@
 
 	<!-- footer section start -->
 	<footer>
-		<span>Créé par : <a href="#">Spider</a> | <span class="far fa-copyright"></span> 2020 Tous droits réservées</span>
+		<span>
+			Fièrement crée par : <a href="#">Spider</a> | <span class="far fa-copyright"></span>
+			<script>document.write(new Date().getFullYear());</script>
+		</span>
 	</footer>
 </body>
 </html>

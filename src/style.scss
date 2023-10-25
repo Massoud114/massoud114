@@ -1,5 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+$fa-font-path: "@fortawesome/fontawesome-pro/webfonts";
+$fa-font-size-base: 16px;
+
+@import "@fortawesome/fontawesome-pro/scss/fontawesome";
+@import "@fortawesome/fontawesome-pro/scss/light";
+@import "@fortawesome/fontawesome-pro/scss/brands";
+
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
 
 * {
 	margin: 0;
@@ -9,16 +16,16 @@
 }
 html {
 	scroll-behavior: smooth;
-	background: #0E0F34;
-	color: #FFFFFF;
-	font-family: 'Ubuntu', "sans-serif";
+	background: #0e0f34;
+	color: #ffffff;
+	font-family: "Ubuntu", "sans-serif";
 }
 
 ::selection {
 	background: darkorange;
 }
 
-.max-width{
+.max-width {
 	max-width: 1300px;
 	margin: auto;
 	padding: 0 80px;
@@ -30,7 +37,7 @@ html {
 	width: 100%;
 	z-index: 999;
 	padding: 5px 0;
-	font-family: 'Ubuntu', 'sans-serif';
+	font-family: "Ubuntu", "sans-serif";
 	transition: all 0.3s ease;
 }
 .navbar.sticky {
@@ -43,12 +50,12 @@ html {
 	justify-content: space-between;
 }
 
-.navbar .logo a{
+.navbar .logo a {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 }
-.navbar .logo a img{
+.navbar .logo a img {
 	width: 90px;
 	height: 100px;
 	transition: all 0.3s ease;
@@ -62,7 +69,7 @@ html {
 }
 .navbar.sticky .logo a span {
 	display: block;
-	color: #FFF;
+	color: #fff;
 	transition: color 0.3s ease;
 }
 
@@ -77,7 +84,7 @@ html {
 
 .navbar .menu li a {
 	display: block;
-	color: #FFF;
+	color: #fff;
 	margin-left: 25px;
 	font-size: 15px;
 	font-weight: 500;
@@ -98,7 +105,7 @@ html {
 	bottom: 10px;
 	text-align: center;
 	line-height: 45px;
-	color: #FFFFFF;
+	color: #ffffff;
 	z-index: 9999;
 	font-size: 30px;
 	border-radius: 6px;
@@ -114,15 +121,15 @@ html {
 }
 
 /* Home section */
-.home{
+.home {
 	display: flex;
 	height: 100vh;
-	color: #FFF;
+	color: #fff;
 	min-height: 500px;
-	font-family: 'Ubuntu', 'sans-serif';
+	font-family: "Ubuntu", "sans-serif";
 	justify-content: space-between;
 	align-items: center;
-	background: url("../img/hero.png")0 200% no-repeat;
+	background: url("../img/hero.png") 0 200% no-repeat;
 }
 .home .picture {
 	margin: 35px 60px -13px 0;
@@ -134,26 +141,26 @@ html {
 .home .max-width {
 	margin: auto 0 auto 40px;
 }
-.home .home-content .text-1{
+.home .home-content .text-1 {
 	font-size: 27px;
 }
-.home .home-content .text-2{
+.home .home-content .text-2 {
 	font-size: 70px;
 	font-weight: 600;
 	margin-left: -3px;
 }
-.home .home-content .text-3{
+.home .home-content .text-3 {
 	font-size: 30px;
 	margin: 5px 0;
 }
-.home .home-content .text-3 span{
+.home .home-content .text-3 span {
 	color: darkorange;
 	font-weight: 500;
 }
 .home .home-content a {
 	display: inline-block;
 	background: darkorange;
-	color: #FFF;
+	color: #fff;
 	font-size: 20px;
 	padding: 12px 36px;
 	margin-top: 20px;
@@ -162,7 +169,7 @@ html {
 	transition: all 0.3s ease;
 }
 .home .home-content a:hover {
-		color: darkorange;
+	color: darkorange;
 	background: none;
 }
 
@@ -170,13 +177,18 @@ html {
 section {
 	padding: 100px 0;
 }
-.about, .services, .projects, .projects, .contact, footer {
-	font-family: 'Ubuntu', 'sans-serif';
+.about,
+.services,
+.projects,
+.projects,
+.contact,
+footer {
+	font-family: "Ubuntu", "sans-serif";
 }
 .about .about-content,
 .services .serv-content,
 .projects .projects-content,
-.contact .contact-content{
+.contact .contact-content {
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
@@ -189,7 +201,7 @@ section .title {
 	font-weight: 500;
 	margin-bottom: 60px;
 	padding-bottom: 20px;
-	font-family: 'Ubuntu', 'sans-serif';
+	font-family: "Ubuntu", "sans-serif";
 }
 section .title::before {
 	content: "";
@@ -208,7 +220,7 @@ section .title::after {
 	font-size: 20px;
 	color: darkorange;
 	padding: 5px;
-	background: #0E0F34;
+	background: #0e0f34;
 	transform: translateX(-50%);
 }
 
@@ -232,7 +244,7 @@ section .title::after {
 .about .about-content .right {
 	width: 55%;
 }
-.about .about-content .right .text{
+.about .about-content .right .text {
 	font-size: 25px;
 	font-weight: 600;
 	margin-bottom: 30px;
@@ -251,7 +263,7 @@ section .title::after {
 .about .about-content .right a {
 	display: inline-block;
 	background: darkorange;
-	color: #FFF;
+	color: #fff;
 	font-size: 20px;
 	font-weight: 500;
 	padding: 10px 30px;
@@ -266,13 +278,13 @@ section .title::after {
 }
 /* services section styling */
 .services {
-	color: #FFF;
+	color: #fff;
 }
 .services .title::before,
-.projects .title::before{
-	background: #FFFFFF;
+.projects .title::before {
+	background: #ffffff;
 }
-.services .title::after{
+.services .title::after {
 	content: "compétences ";
 }
 .services .serv-content .card {
@@ -288,22 +300,22 @@ section .title::after {
 	background: darkorange;
 	border-color: #202746;
 }
-.services .serv-content .card .box{
+.services .serv-content .card .box {
 	transition: all 0.3s ease;
 }
 .services .serv-content .card:hover .box {
 	transform: scale(1.05);
 }
-.services .serv-content .card i{
+.services .serv-content .card i {
 	font-size: 70px;
 	color: darkorange;
 	transition: color 0.3s ease;
 }
 .services .serv-content .card:hover i {
-	color: #FFFFFF;
+	color: #ffffff;
 }
-.services .serv-content .card .text{
-	font-family: 'Playfair Display', 'sans-serif';
+.services .serv-content .card .text {
+	font-family: "Playfair Display", "sans-serif";
 	font-size: 30px;
 	font-weight: 500;
 	margin: 10px 0 10px 0;
@@ -326,7 +338,7 @@ section .title::after {
 }
 .projects .carousel .box {
 	border-radius: 6px 6px 0 0;
-	background: #0E0F34;
+	background: #0e0f34;
 	border-bottom: 2px solid darkorange;
 	overflow: hidden;
 }
@@ -359,7 +371,7 @@ section .title::after {
 .projects .card .project-title {
 	margin: 25px 50px;
 	font-size: 28px;
-	font-family: 'Playfair Display', 'sans-serif';
+	font-family: "Playfair Display", "sans-serif";
 	text-transform: uppercase;
 }
 .projects .card .text {
@@ -375,18 +387,18 @@ section .title::after {
 	cursor: grab;
 }
 
-.tns-nav{
+.tns-nav {
 	margin: 20px 25px;
 }
 .tns-nav .tns-nav-active {
 	background-color: darkorange;
 }
 
-.tns-nav button{
+.tns-nav button {
 	width: 20px;
 	height: 4px;
 	margin: 0 5px;
-	outline: none!important;
+	outline: none !important;
 	transition: all 0.3s ease;
 	border: 0 solid;
 	background: #ff8c0052;
@@ -394,7 +406,7 @@ section .title::after {
 }
 
 /* section contact styling */
-.contact .title::after{
+.contact .title::after {
 	content: "prenez contact";
 }
 .contact .contact-content .column {
@@ -424,7 +436,7 @@ section .title::after {
 	border-radius: 15px;
 	padding: 0 45px;
 	margin: 15px 0;
-	transition: all .5s ease 0ms;
+	transition: all 0.5s ease 0ms;
 }
 .contact .contact-content .row .info {
 	margin-left: 30px;
@@ -437,9 +449,9 @@ section .title::after {
 	font-weight: 500;
 	font-size: 25px;
 	text-transform: uppercase;
-	font-family: 'Playfair Display', 'sans-serif';
+	font-family: "Playfair Display", "sans-serif";
 	margin-bottom: 5px;
-	color: #FFFFFF;
+	color: #ffffff;
 }
 .contact .contact-content .info .sub-title {
 	color: darkorange;
@@ -447,14 +459,13 @@ section .title::after {
 .contact .right form .fields {
 	display: flex;
 	justify-content: space-between;
-
 }
-.contact .right form .field{
+.contact .right form .field {
 	height: 65px;
 	width: 100%;
 	margin-bottom: 15px;
 }
-.contact .right form .smallfield{
+.contact .right form .smallfield {
 	width: 48%;
 }
 .contact .right form .textarea {
@@ -462,33 +473,33 @@ section .title::after {
 	width: 100%;
 }
 .contact .right form .field input,
-.contact .right form .textarea textarea{
+.contact .right form .textarea textarea {
 	height: 100%;
 	width: 100%;
-	border : 1px solid lightgrey;
+	border: 1px solid lightgrey;
 	border-radius: 6px;
 	outline: none;
 	padding: 0 25px;
 	font-size: 17px;
-	font-family: 'Poppins', 'sans-serif';
+	font-family: "Poppins", "sans-serif";
 }
-.contact .right form .textarea textarea{
+.contact .right form .textarea textarea {
 	padding-top: 10px;
 	resize: none;
 }
 .contact .right form .button {
 	height: 60px;
 	width: 170px;
-	margin:auto;
+	margin: auto;
 	margin-top: -40px !important;
 	margin-bottom: 15px;
 }
 .contact .right form .button button {
 	width: 100%;
 	height: 100%;
-	border : 2px solid darkorange;
+	border: 2px solid darkorange;
 	background: darkorange;
-	color: #FFF;
+	color: #fff;
 	font-size: 20px;
 	font-weight: 500;
 	border-radius: 6px;
@@ -498,14 +509,14 @@ section .title::after {
 .contact .right form .button button:hover {
 	color: darkorange;
 	background: none;
-	border : 2px solid;
+	border: 2px solid;
 }
 
 /* footer section styling */
 footer {
 	background: #040526;
 	padding: 20px 23px;
-	color:  #FFFFFF;
+	color: #ffffff;
 	text-align: center;
 }
 footer span a {
@@ -516,35 +527,28 @@ footer span a:hover {
 	text-decoration: underline;
 }
 
-
-
-
-
-
-
-
 /* Responsive media query start */
-@media (max-width: 1300px){
+@media (max-width: 1300px) {
 	.home .max-width {
 		margin-left: 0;
 	}
 }
 
-@media (max-width: 1104px){
+@media (max-width: 1104px) {
 	.about .about-content .left img {
 		height: 350px;
 		width: 350px;
 	}
 }
 
-@media (max-width: 991px){
-	.max-width{
+@media (max-width: 991px) {
+	.max-width {
 		padding: 0 50px;
 	}
 }
 
-@media (max-width: 947px){
-	.menu-btn{
+@media (max-width: 947px) {
+	.menu-btn {
 		display: block;
 		z-index: 999;
 	}
@@ -552,7 +556,7 @@ footer span a:hover {
 		content: "\f00d";
 	}
 	.navbar .menu {
-		position:fixed;
+		position: fixed;
 		height: 100vh;
 		width: 100%;
 		left: -100%;
@@ -562,39 +566,39 @@ footer span a:hover {
 		padding-top: 80px;
 		transition: all 0.3s ease;
 	}
-	.navbar .menu.active{
+	.navbar .menu.active {
 		left: 0;
 	}
 	.navbar .menu li {
 		display: block;
 	}
-	.navbar .menu li a{
+	.navbar .menu li a {
 		display: inline-block;
 		margin: 25px 0;
 		font-size: 25px;
 	}
-	.home .home-content .text-2{
+	.home .home-content .text-2 {
 		font-size: 70px;
 	}
-	.home .home-content .text-3{
+	.home .home-content .text-3 {
 		font-size: 20px;
 	}
 	.home .home-content a {
 		font-size: 23px;
 		padding: 10px 30px;
 	}
-	.max-width{
+	.max-width {
 		max-width: 800px;
 	}
-	.about .about-content .column{
+	.about .about-content .column {
 		width: 100%;
 	}
-	.about .about-content .left	{
+	.about .about-content .left {
 		display: flex;
 		justify-content: center;
 		margin: 0 auto 60px;
 	}
-	.about .about-content .right	{
+	.about .about-content .right {
 		flex: 100%;
 	}
 	.services .serv-content .card {
@@ -602,7 +606,7 @@ footer span a:hover {
 		margin-bottom: 20px;
 	}
 	.projects .projects-content .column,
-	.contact .contact-content .column{
+	.contact .contact-content .column {
 		width: 100%;
 		margin-bottom: 35px;
 	}
@@ -614,41 +618,40 @@ footer span a:hover {
 		width: 0;
 		height: 0;
 	}
-	.home .picture{
+	.home .picture {
 		margin: 0;
 	}
 	.home .max-width {
 		margin: auto;
-		text-align : center;
+		text-align: center;
 	}
 }
-@media (max-width: 690px){
-	.max-width{
+@media (max-width: 690px) {
+	.max-width {
 		padding: 0 23px;
 	}
-	.home .home-content .text-2{
+	.home .home-content .text-2 {
 		font-size: 60px;
 	}
-	.home .home-content .text-3{
+	.home .home-content .text-3 {
 		font-size: 32px;
 	}
 	.home .home-content a {
 		font-size: 20px;
 	}
-	.services .serv-content .card{
+	.services .serv-content .card {
 		width: 100%;
 	}
 }
 
-@media (max-width: 500px){
-	.home .home-content .text-2{
+@media (max-width: 500px) {
+	.home .home-content .text-2 {
 		font-size: 50px;
 	}
-	.home .home-content .text-3{
+	.home .home-content .text-3 {
 		font-size: 27px;
 	}
 }
-
 
 ::-webkit-scrollbar {
 	width: 8px;
@@ -681,15 +684,17 @@ footer span a:hover {
 }
 
 .country-selector a {
-	color: #FFFFFF !important;
+	color: #ffffff !important;
 }
 
-.wg-drop.country-selector, .wg-drop.country-selector ul, .wgcurrent {
+.wg-drop.country-selector,
+.wg-drop.country-selector ul,
+.wgcurrent {
 	background: #ff8c00 !important;
 	border: none !important;
 	margin: 0;
 }
 
 .wg-drop.country-selector .wgcurrent:after {
-	color: #0E0F34 !important;
+	color: #0e0f34 !important;
 }

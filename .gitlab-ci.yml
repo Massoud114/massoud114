@@ -1,0 +1,29 @@
+image: node:16.5.0
+pages:
+  stage: deploy
+  cache:
+    key:
+      files:
+        - yarn.lock
+      prefix: yarn
+    paths:
+      - node_modules/
+  script:
+    - corepack enable
+    - yarn install --non-interactive
+    - yarn run build
+    - cp -a dist/. public/
+  artifacts:
+    paths:
+      - public
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+
+docker-image-build:
+  image: docker:stable
+  services:
+    - docker:23-dind
+  script:
+    - docker login registry.gitlab.com -u massoud114 -p glpat-vyWdmKzyXYGq1aKkxdKb
+    - docker build -t registry.gitlab.com/massoud114/massoud114 .
+    - docker push registry.gitlab.com/massoud114/massoud114

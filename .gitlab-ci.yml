@@ -24,5 +24,6 @@ docker-image-build:
   services:
     - docker:23-dind
   script:
+    - docker login registry.gitlab.com -u massoud114
     - docker build -t registry.gitlab.com/massoud114/massoud114 .
     - docker push registry.gitlab.com/massoud114/massoud114

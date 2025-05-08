@@ -1,15 +1,18 @@
-import "./style.scss";
+import "./style.css";
 import "aos/dist/aos.css";
 import Typed from "typed.js";
 import AOS from "aos";
 import { tns } from "tiny-slider";
+import '@fontsource/ubuntu';
+import '@fontsource-variable/playfair-display';
 
 document.addEventListener("DOMContentLoaded", function () {
+
 	window.addEventListener("scroll", function () {
 		if (this.scrollY > 20) {
-			document.querySelector(".navbar").classList.add("sticky");
+			document.querySelector(".navbar").classList.add("outview");
 		} else {
-			document.querySelector(".navbar").classList.remove("sticky");
+			document.querySelector(".navbar").classList.remove("outview");
 		}
 		if (this.scrollY > 500) {
 			document.querySelector(".scroll-up-btn").classList.add("show");
@@ -80,8 +83,6 @@ document.addEventListener("DOMContentLoaded", function () {
 		once: true, // whether animation should happen only once - while scrolling down
 		mirror: true,
 	});
-
-	document.getElementById("year").innerHTML = (Math.floor((new Date() - new Date(2001, 10, 4)) / 3.15576e+10)).toString();
 
 	for (let i = document.getElementsByClassName("xpAge").length - 1; i >= 0; i--) {
 		document.getElementsByClassName("xpAge")[i].innerHTML = (Math.floor((new Date() - new Date(2018, 1, 1)) / 3.15576e+10)).toString();

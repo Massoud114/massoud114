@@ -1,45 +1,54 @@
-$fa-font-path: "@fortawesome/fontawesome-pro/webfonts";
-$fa-font-size-base: 16px;
+@import "tailwindcss";
 
-@import "@fortawesome/fontawesome-pro/scss/fontawesome";
-@import "@fortawesome/fontawesome-pro/scss/light";
-@import "@fortawesome/fontawesome-pro/scss/brands";
-
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+@theme {
+	--color-primary: #0e0f34;
+	--color-secondary: darkorange;
+}
 
 * {
-	margin: 0;
-	padding: 0;
 	box-sizing: border-box;
 	text-decoration: none;
 }
 html {
 	scroll-behavior: smooth;
-	background: #0e0f34;
+	background: var(--color-primary);
 	color: #ffffff;
 	font-family: "Ubuntu", "sans-serif";
 }
 
+body {
+	margin: 0;
+	overflow-x: hidden;
+}
+
+.icon {
+	display: inline-block;
+	vertical-align: middle;
+	flex-shrink: 0;
+	stroke: currentColor;
+	fill: none;
+	stroke-width: 2;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+}
+
 ::selection {
-	background: darkorange;
+	background: var(--color-secondary);
 }
 
 .max-width {
-	max-width: 1300px;
+	width: min(1300px, 100%);
 	margin: auto;
-	padding: 0 80px;
+	padding: 0 clamp(20px, 5vw, 80px);
 }
 
-/* navbar styling */
 .navbar {
-	position: absolute;
-	width: 100%;
-	z-index: 999;
-	padding: 5px 0;
-	font-family: "Ubuntu", "sans-serif";
-	transition: all 0.3s ease;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: clamp(8px, 1.8vw, 14px) clamp(16px, 4vw, 36px);
 }
+
 .navbar.sticky {
 	padding: 0;
 }
@@ -49,31 +58,51 @@ html {
 	align-items: center;
 	justify-content: space-between;
 }
-
-.navbar .logo a {
+.navbar .logo {
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
+	height: auto;
 }
-.navbar .logo a img {
-	width: 90px;
-	height: 100px;
+
+.navbar .logo .logo-link {
+	display: flex;
+	align-items: center;
+	gap: clamp(2px, 1vw, 10px);
+}
+
+.navbar .logo .logo-image {
+	width: clamp(88px, 12vw, 150px);
+	height: auto;
+	transform: scale(0.75);
 	transition: all 0.3s ease;
 }
 
-.navbar .logo a span {
-	color: darkorange;
+.navbar .logo .logo-text {
+	color: var(--color-secondary);
+	font-size: clamp(1.6rem, 4vw, 3rem);
 	font-weight: 600;
-	font-size: 36px;
-	margin-left: 15px;
+	transition: color 0.3s ease;
 }
-.navbar.sticky .logo a span {
+
+.navbar .logo:hover .logo-image {
+	transform: scale(1);
+}
+
+.navbar .logo:hover .logo-text {
+	color: #ffffff;
+}
+
+.navbar .logo a span {
+	font-size: inherit;
+}
+
+.navbar.outview .logo a span {
 	display: block;
 	color: #fff;
 	transition: color 0.3s ease;
 }
 
-.navbar.sticky .logo img {
+.navbar.outview .logo img {
 	transform: rotate(-90deg);
 }
 
@@ -93,14 +122,17 @@ html {
 }
 
 .navbar .menu li a:hover {
-	color: darkorange;
+	color: var(--color-secondary);
 }
 
 .scroll-up-btn {
 	position: fixed;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	height: 45px;
 	width: 42px;
-	background: darkorange;
+	background: var(--color-secondary);
 	right: 30px;
 	bottom: 10px;
 	text-align: center;
@@ -114,6 +146,12 @@ html {
 	pointer-events: none;
 	transition: all 0.3s ease;
 }
+
+.scroll-up-btn .icon {
+	width: 30px;
+	height: 30px;
+}
+
 .scroll-up-btn.show {
 	bottom: 30px;
 	opacity: 1;
@@ -122,60 +160,67 @@ html {
 
 /* Home section */
 .home {
-	display: flex;
-	height: 100vh;
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) minmax(280px, 40vw);
+	gap: clamp(24px, 5vw, 72px);
 	color: #fff;
-	min-height: 500px;
+	min-height: min(100svh, 760px);
 	font-family: "Ubuntu", "sans-serif";
-	justify-content: space-between;
 	align-items: center;
 	background: url("../img/hero.png") 0 200% no-repeat;
+	padding: clamp(16px, 2.5vw, 28px) 0;
 }
 .home .picture {
-	margin: 35px 60px -13px 0;
+	margin: 0;
+	justify-self: end;
+	flex-shrink: 0;
 }
 .home .picture img {
-	width: 510px;
+	width: min(100%, 510px);
+	max-width: 100%;
+	height: auto;
 	object-fit: cover;
 }
 .home .max-width {
-	margin: auto 0 auto 40px;
+	margin: 0;
+	width: auto;
 }
 .home .home-content .text-1 {
-	font-size: 27px;
+	font-size: clamp(20px, 3vw, 27px);
 }
 .home .home-content .text-2 {
-	font-size: 70px;
+	font-size: clamp(40px, 7vw, 70px);
 	font-weight: 600;
 	margin-left: -3px;
+	line-height: 1.2;
 }
 .home .home-content .text-3 {
-	font-size: 30px;
+	font-size: clamp(18px, 3.5vw, 30px);
 	margin: 5px 0;
 }
 .home .home-content .text-3 span {
-	color: darkorange;
+	color: var(--color-secondary);
 	font-weight: 500;
 }
 .home .home-content a {
 	display: inline-block;
-	background: darkorange;
+	background: var(--color-secondary);
 	color: #fff;
-	font-size: 20px;
+	font-size: clamp(16px, 2.5vw, 20px);
 	padding: 12px 36px;
 	margin-top: 20px;
 	border-radius: 6px;
-	border: 2px solid darkorange;
+	border: 2px solid var(--color-secondary);
 	transition: all 0.3s ease;
 }
 .home .home-content a:hover {
-	color: darkorange;
+	color: var(--color-secondary);
 	background: none;
 }
 
 /* all similar styling code */
 section {
-	padding: 100px 0;
+	padding: clamp(50px, 8vw, 100px) 0;
 }
 .about,
 .services,
@@ -197,9 +242,9 @@ footer {
 section .title {
 	position: relative;
 	text-align: center;
-	font-size: 40px;
+	font-size: clamp(28px, 5vw, 40px);
 	font-weight: 500;
-	margin-bottom: 60px;
+	margin-bottom: clamp(30px, 5vw, 60px);
 	padding-bottom: 20px;
 	font-family: "Ubuntu", "sans-serif";
 }
@@ -208,7 +253,7 @@ section .title::before {
 	position: absolute;
 	bottom: 0;
 	left: 50%;
-	width: 300px;
+	width: clamp(160px, 40vw, 300px);
 	height: 3px;
 	background: #fff;
 	transform: translateX(-50%);
@@ -218,9 +263,9 @@ section .title::after {
 	bottom: -12px;
 	left: 50%;
 	font-size: 20px;
-	color: darkorange;
+	color: var(--color-secondary);
 	padding: 5px;
-	background: #0e0f34;
+	background: var(--color-primary);
 	transform: translateX(-50%);
 }
 
@@ -236,8 +281,9 @@ section .title::after {
 	width: 45%;
 }
 .about .about-content .left img {
-	height: 400px;
-	width: 400px;
+	width: min(100%, 400px);
+	aspect-ratio: 1 / 1;
+	height: auto;
 	object-fit: cover;
 	border-radius: 6px;
 }
@@ -245,35 +291,36 @@ section .title::after {
 	width: 55%;
 }
 .about .about-content .right .text {
-	font-size: 25px;
+	font-size: clamp(20px, 3vw, 25px);
 	font-weight: 600;
 	margin-bottom: 30px;
 }
 .about .about-content .right .text span {
-	color: darkorange;
+	color: var(--color-secondary);
 }
 .about .about-content .right p::first-letter {
-	color: darkorange;
-	font-size: 45px;
+	color: var(--color-secondary);
+	font-size: clamp(30px, 5vw, 45px);
 }
 .about .about-content .right p {
 	text-align: justify;
-	line-height: 2;
+	line-height: 1.8;
+	font-size: clamp(14px, 2vw, 16px);
 }
 .about .about-content .right a {
 	display: inline-block;
-	background: darkorange;
+	background: var(--color-secondary);
 	color: #fff;
-	font-size: 20px;
+	font-size: clamp(16px, 2.5vw, 20px);
 	font-weight: 500;
 	padding: 10px 30px;
 	margin-top: 40px;
 	border-radius: 6px;
-	border: 2px solid darkorange;
+	border: 2px solid var(--color-secondary);
 	transition: all 0.3s ease;
 }
 .about .about-content .right a:hover {
-	color: darkorange;
+	color: var(--color-secondary);
 	background: none;
 }
 /* services section styling */
@@ -287,8 +334,13 @@ section .title::after {
 .services .title::after {
 	content: "compétences ";
 }
+.services .serv-content {
+	gap: 20px;
+	align-items: stretch;
+}
 .services .serv-content .card {
-	width: calc(33% - 20px);
+	flex: 1 1 calc(33.333% - 20px);
+	min-width: min(280px, 100%);
 	background: #202746;
 	text-align: center;
 	border-radius: 6px;
@@ -297,7 +349,7 @@ section .title::after {
 	transition: all 0.3s ease;
 }
 .services .serv-content .card:hover {
-	background: darkorange;
+	background: var(--color-secondary);
 	border-color: #202746;
 }
 .services .serv-content .card .box {
@@ -306,23 +358,25 @@ section .title::after {
 .services .serv-content .card:hover .box {
 	transform: scale(1.05);
 }
-.services .serv-content .card i {
-	font-size: 70px;
-	color: darkorange;
+.services .serv-content .card .icon-service {
+	font-size: clamp(50px, 8vw, 70px);
+	width: clamp(50px, 8vw, 70px);
+	height: clamp(50px, 8vw, 70px);
+	color: var(--color-secondary);
 	transition: color 0.3s ease;
 }
-.services .serv-content .card:hover i {
+.services .serv-content .card:hover .icon-service {
 	color: #ffffff;
 }
 .services .serv-content .card .text {
 	font-family: "Playfair Display", "sans-serif";
-	font-size: 30px;
+	font-size: clamp(22px, 3.5vw, 30px);
 	font-weight: 500;
 	margin: 10px 0 10px 0;
 	text-transform: uppercase;
 }
 .services .serv-content .card p {
-	font-size: 17px;
+	font-size: clamp(14px, 2vw, 17px);
 	line-height: 1.5;
 }
 
@@ -338,15 +392,15 @@ section .title::after {
 }
 .projects .carousel .box {
 	border-radius: 6px 6px 0 0;
-	background: #0e0f34;
-	border-bottom: 2px solid darkorange;
+	background: var(--color-primary);
+	border-bottom: 2px solid var(--color-secondary);
 	overflow: hidden;
 }
 .projects .carousel .project-picture {
 	border-radius: 6px 6px 0 0;
 	width: 100%;
 	overflow: hidden;
-	height: 300px;
+	height: clamp(220px, 32vw, 300px);
 	transition: transform ease 1s;
 }
 .projects .box:hover > .project-picture {
@@ -354,7 +408,7 @@ section .title::after {
 	transform: scale(1.105);
 }
 .projects .carousel .card img {
-	height: 300px;
+	height: clamp(220px, 32vw, 300px);
 	width: 100%;
 	object-fit: cover;
 	display: block;
@@ -362,25 +416,24 @@ section .title::after {
 	opacity: 1;
 }
 .projects .carousel .tags {
-	font-size: 12px;
-	color: darkorange;
-	margin-left: 50px;
+	font-size: clamp(10px, 1.5vw, 12px);
+	color: var(--color-secondary);
+	margin-left: clamp(16px, 4vw, 50px);
 	text-transform: uppercase;
-	margin-top: 30px;
+	margin-top: clamp(18px, 3vw, 30px);
 }
 .projects .card .project-title {
-	margin: 25px 50px;
-	font-size: 28px;
+	margin: clamp(16px, 3vw, 25px) clamp(16px, 4vw, 50px);
+	font-size: clamp(20px, 3vw, 28px);
 	font-family: "Playfair Display", "sans-serif";
 	text-transform: uppercase;
 }
 .projects .card .text {
 	text-align: justify;
-	margin: 25px 35px 55px 35px;
-}
-.projects .card .text {
-	text-align: justify;
-	margin: 25px 35px 55px 35px;
+	margin: clamp(16px, 3vw, 25px) clamp(16px, 3.5vw, 35px)
+		clamp(32px, 6vw, 55px) clamp(16px, 3.5vw, 35px);
+	font-size: clamp(14px, 2vw, 16px);
+	line-height: 1.6;
 }
 
 .carousel {
@@ -391,7 +444,7 @@ section .title::after {
 	margin: 20px 25px;
 }
 .tns-nav .tns-nav-active {
-	background-color: darkorange;
+	background-color: var(--color-secondary);
 }
 
 .tns-nav button {
@@ -426,7 +479,7 @@ section .title::after {
 	flex-direction: column;
 }
 .contact .contact-content .row:hover {
-	border-color: darkorange;
+	border-color: var(--color-secondary);
 }
 .contact .contact-content .row {
 	display: flex;
@@ -441,9 +494,10 @@ section .title::after {
 .contact .contact-content .row .info {
 	margin-left: 30px;
 }
-.contact .contact-content .row i {
-	font-size: 25px;
-	color: darkorange;
+.contact .contact-content .row .icon-contact {
+	width: 25px;
+	height: 25px;
+	color: var(--color-secondary);
 }
 .contact .contact-content .info .head {
 	font-weight: 500;
@@ -454,7 +508,7 @@ section .title::after {
 	color: #ffffff;
 }
 .contact .contact-content .info .sub-title {
-	color: darkorange;
+	color: var(--color-secondary);
 }
 .contact .right form .fields {
 	display: flex;
@@ -495,10 +549,14 @@ section .title::after {
 	margin-bottom: 15px;
 }
 .contact .right form .button button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 6px;
 	width: 100%;
 	height: 100%;
-	border: 2px solid darkorange;
-	background: darkorange;
+	border: 2px solid var(--color-secondary);
+	background: var(--color-secondary);
 	color: #fff;
 	font-size: 20px;
 	font-weight: 500;
@@ -506,8 +564,14 @@ section .title::after {
 	cursor: pointer;
 	transition: all 0.3s ease;
 }
+
+.contact .right form .button .icon-button {
+	width: 20px;
+	height: 20px;
+}
+
 .contact .right form .button button:hover {
-	color: darkorange;
+	color: var(--color-secondary);
 	background: none;
 	border: 2px solid;
 }
@@ -520,75 +584,27 @@ footer {
 	text-align: center;
 }
 footer span a {
-	color: darkorange;
+	color: var(--color-secondary);
 	text-decoration: none;
 }
 footer span a:hover {
 	text-decoration: underline;
 }
 
+footer .icon-footer {
+	width: 16px;
+	height: 16px;
+	margin: 0 4px;
+}
+
 /* Responsive media query start */
-@media (max-width: 1300px) {
-	.home .max-width {
-		margin-left: 0;
-	}
-}
-
-@media (max-width: 1104px) {
-	.about .about-content .left img {
-		height: 350px;
-		width: 350px;
-	}
-}
-
-@media (max-width: 991px) {
-	.max-width {
-		padding: 0 50px;
-	}
-}
-
 @media (max-width: 947px) {
 	.menu-btn {
 		display: block;
 		z-index: 999;
 	}
 	.menu-btn i.active:before {
-		content: "\f00d";
-	}
-	.navbar .menu {
-		position: fixed;
-		height: 100vh;
-		width: 100%;
-		left: -100%;
-		top: 0;
-		background: #111;
-		text-align: center;
-		padding-top: 80px;
-		transition: all 0.3s ease;
-	}
-	.navbar .menu.active {
-		left: 0;
-	}
-	.navbar .menu li {
-		display: block;
-	}
-	.navbar .menu li a {
-		display: inline-block;
-		margin: 25px 0;
-		font-size: 25px;
-	}
-	.home .home-content .text-2 {
-		font-size: 70px;
-	}
-	.home .home-content .text-3 {
-		font-size: 20px;
-	}
-	.home .home-content a {
-		font-size: 23px;
-		padding: 10px 30px;
-	}
-	.max-width {
-		max-width: 800px;
+		content: "X";
 	}
 	.about .about-content .column {
 		width: 100%;
@@ -602,7 +618,7 @@ footer span a:hover {
 		flex: 100%;
 	}
 	.services .serv-content .card {
-		width: calc(50% - 10px);
+		flex-basis: calc(50% - 10px);
 		margin-bottom: 20px;
 	}
 	.projects .projects-content .column,
@@ -614,42 +630,44 @@ footer span a:hover {
 
 /* only for the main picture */
 @media (max-width: 860px) {
-	.home .picture img {
-		width: 0;
-		height: 0;
+	.home {
+		grid-template-columns: 1fr;
+		text-align: center;
+		background-position: center 140%;
 	}
 	.home .picture {
-		margin: 0;
+		justify-self: center;
 	}
 	.home .max-width {
 		margin: auto;
 		text-align: center;
 	}
+	.home .picture img {
+		width: min(72vw, 340px);
+	}
 }
+
+@media (max-width: 768px) {
+	.home {
+		min-height: auto;
+	}
+}
+
 @media (max-width: 690px) {
-	.max-width {
-		padding: 0 23px;
-	}
-	.home .home-content .text-2 {
-		font-size: 60px;
-	}
-	.home .home-content .text-3 {
-		font-size: 32px;
-	}
-	.home .home-content a {
-		font-size: 20px;
-	}
 	.services .serv-content .card {
+		flex-basis: 100%;
+	}
+	.contact .right form .smallfield {
 		width: 100%;
+	}
+	.contact .right form .fields {
+		flex-direction: column;
 	}
 }
 
 @media (max-width: 500px) {
-	.home .home-content .text-2 {
-		font-size: 50px;
-	}
-	.home .home-content .text-3 {
-		font-size: 27px;
+	.about .about-content .left img {
+		width: min(100%, 280px);
 	}
 }
 
@@ -661,7 +679,7 @@ footer span a:hover {
 	border-radius: 5px;
 }
 ::-webkit-scrollbar-thumb {
-	background: darkorange;
+	background: var(--color-secondary);
 	border-radius: 5px;
 }
 
@@ -696,5 +714,5 @@ footer span a:hover {
 }
 
 .wg-drop.country-selector .wgcurrent:after {
-	color: #0e0f34 !important;
+	color: var(--color-primary) !important;
 }
